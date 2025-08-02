@@ -1,0 +1,14 @@
+{
+  "name": "agent20-core",
+  "version": "1.0.0",
+  "main": "agent20.js",
+  "type": "module",
+  "scripts": {
+    "start": "node agent20.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.3",
+    "openai": "^4.0.0"
+  }
+}
