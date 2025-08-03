@@ -1,6 +1,7 @@
 import { distillInput } from './gpt.js';
 import { sendToNotion } from './notion.js';
 import { sendToDiscordLog, sendToDiscordAlert } from './discord.js';
+import { processNextEntry } from './processQueue.js';
 
 export async function runAgent(rawInput) {
   console.log("🧠 Agent 20 is processing...");
@@ -40,4 +41,6 @@ export async function runAgent(rawInput) {
 
   console.log("✅ Agent 20 update complete.");
 }
-// TODO: implement core.js
+
+// === NEW: Run from queue if no input is manually passed ===
+await processNextEntry();
